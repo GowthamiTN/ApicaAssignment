@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "cd567712-58d3-4366-9e15-38f4954d3a05",
+		"name": "UserMangement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18116953"
+	},
+	"item": [
+		{
+			"name": "Fetch",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSaXRoaWthIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3NDM3NTcyNjMsImV4cCI6MTc0Mzc2MDg2M30.2kNPyzf31nSFlUp64ScMEC1RuNOv6901dukMHtCrOAs"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/fetch"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJSaXRoaWthIiwicm9sZXMiOlsiVVNFUiJdLCJpYXQiOjE3NDM3NTY3NjksImV4cCI6MTc0Mzc2MDM2OX0.hVbyO5NMN9YUMUVZXkPHxVT-0PYLPmcmP05gJHtjQHg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/login"
+			},
+			"response": []
+		},
+		{
+			"name": "token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Vishal\",\r\n    \"password\":\"SecurePassword123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Regitser",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Musiew\",\r\n  \"password\": \"SecurePassword123\",\r\n  \"roles\": [\r\n    { \"name\": \"USER\" }\r\n  ],\r\n  \"email\": \"Musiew@example.com\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Musiew\",\r\n  \"password\": \"SecurePassword123\",\r\n  \"roles\": [\r\n    { \"name\": \"USER\" }\r\n  ],\r\n  \"email\": \"Musiew@example.com\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJBRE1JTiJdLCJzdWIiOiJEaXNoYW4iLCJpYXQiOjE3NDM5MzAyNTksImV4cCI6MTc0MzkzMDU1OX0.6T1efAy5ybtagasmMT4cUMNpp6SJ4s7FZB8iGODcN2I"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"Musiew\",\r\n  \"password\": \"SecurePassword123\",\r\n  \"roles\": [\r\n    { \"name\": \"USER\" }\r\n  ],\r\n  \"email\": \"Musiew@example.com\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/user/delete/5"
+			},
+			"response": []
+		},
+		{
+			"name": "all",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"password": "adminpass",
+						"username": "admin"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/events/all"
+			},
+			"response": []
+		},
+		{
+			"name": "events user",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8081/events/user/Dev"
+			},
+			"response": []
+		}
+	]
+}
