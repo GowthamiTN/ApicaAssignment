@@ -17,7 +17,7 @@ This project contains two Spring Boot-based microservices:
 
 ## ⚙️ Tech Stack
 
-- Java 17
+- Java 21
 - Spring Boot
 - Spring Security (JWT & Role-based auth)
 - Apache Kafka
